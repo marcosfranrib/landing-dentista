@@ -3,6 +3,7 @@
   --bg: #F8FAFC;          /* fundo principal */
   --bg-alt: #EFF6FF;      /* azul névoa */
   --primary: #1E3A8A;     /* títulos */
+  --primary-dark: #172554;/* hover do azul primário */
   --icon: #2563EB;        /* detalhes */
   --cta: #10B981;         /* botão */
   --cta-hover: #0D9488;
@@ -144,7 +145,7 @@ a:hover {
 .section { padding: 4.5rem 0; }
 .section-hero { background: var(--bg); }
 .section-alt { background: var(--bg-alt); }
-.section-cta { background: var(--bg-alt); padding: 5.5rem 0; }
+.section-cta { background: var(--dark); color: #E2E8F0; padding: 5.5rem 0 2.5rem; }
 @media (min-width: 992px) {
   .section { min-height: calc(100vh - var(--header-h)); display: flex; align-items: center; }
   .section > .container { width: 100%; }
@@ -201,6 +202,9 @@ a:hover {
   transform: scale(1.15);
 }
 
+.sobre-photo img{
+   transform: none !important;
+}
 
 /* Card flutuante inferior esquerdo */
 .hero-quote-card {
@@ -238,9 +242,22 @@ a:hover {
 .accordion-button { font-weight: 600; color: var(--primary); }
 
 /* ===== Footer ===== */
-.site-footer { background: var(--dark); color: #E2E8F0; padding: 4.5rem 0 2rem; }
-.site-footer a { color: #fff; }
-.footer-title { color: #fff; font-size: 2rem; margin-bottom: 1.75rem; }
+.site-footer { 
+  background: var(--dark); 
+  color: #E2E8F0; 
+  padding: 4.5rem 0 2rem; 
+}
+
+.site-footer a {
+  color: #fff; 
+}
+
+.footer-title .tittle-cta{ 
+  color: #fff ; 
+  font-size: 2rem; 
+  margin-bottom: 1.75rem; 
+}
+
 .map-box { height: 100%; min-height: 420px; border-radius: 24px; overflow: hidden; background: #1E293B; border: 1px solid #475569; }
 .map-box iframe { width: 100%; height: 100%; min-height: 420px; border: 0; }
 .footer-bottom { display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: space-between; align-items: center; border-top: 1px solid #334155; margin-top: 3.5rem; padding-top: 1.75rem; }
@@ -601,4 +618,56 @@ a:hover {
 .wa-fixed:focus .wa-fixed__label {
   max-width: 100px;
   opacity: 1;
+}
+
+/* ===== Botão "Agendar consulta" por seção (azul #1E3A8A) =====
+   Otimizado: cada seção citada recebe seu próprio estilo, sem afetar
+   os botões do hero, de "Para quem", do CTA final e do rodapé.            */
+
+/* Header — fundo sólido #1E3A8A */
+.site-header .btn-cta {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+}
+.site-header .btn-cta:hover,
+.site-header .btn-cta:focus {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/* Sobre — transparente com borda #1E3A8A */
+#sobre .btn-cta {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+#sobre .btn-cta:hover,
+#sobre .btn-cta:focus {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* "Como funciona o atendimento" (Formação) — fundo sólido #1E3A8A */
+#formacao .btn-cta {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+}
+#formacao .btn-cta:hover,
+#formacao .btn-cta:focus {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/* FAQ — transparente com borda #1E3A8A */
+#faq .btn-cta {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+#faq .btn-cta:hover,
+#faq .btn-cta:focus {
+  background: var(--primary);
+  color: #fff;
 }

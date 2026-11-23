@@ -1,7 +1,7 @@
 /* ===== Configuração — edite aqui ===== */
 const CONFIG = {
-  whatsappNumber: '5521900000000', // DDI + DDD + número, só dígitos
-  whatsappMessage: 'Olá, Dr. Bruno! Gostaria de agendar uma consulta.',
+  whatsappNumber: '5521985126130', // DDI + DDD + número, só dígitos
+  whatsappMessage: 'Olá, Dr. Bruno! Encontrei seu contato pelo site e gostaria de obter mais informações sobre o atendimento e a possibilidade de agendar uma consulta.',
   mapsEmbedUrl: ''                  // cole aqui o "src" do iframe do Google Maps
 };
 
